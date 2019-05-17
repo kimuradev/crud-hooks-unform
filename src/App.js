@@ -63,23 +63,24 @@ const App = props => {
 
   return (
     <>
-      <Styled.H1>CRUD</Styled.H1>
+      <Styled.H1>C.R.U.D.</Styled.H1>
       <Styled.GridFlexRow>
         <Paper className={classes.paper}>
           {editing ? (
             <>
-              <Styled.H2>Edit user</Styled.H2>
+              <Styled.H2 color="#7159c1">Edit user</Styled.H2>
               <UpdateForm editing={editing} setEditing={setEditing} currentUser={currentUser} updateUser={updateUser} />
             </>
           ) : (
             <>
-              <Styled.H2>Add user</Styled.H2>
+              <Styled.H2 color="#7159c1">Add user</Styled.H2>
               <CreateForm addUser={addUser} />
             </>
           )}
         </Paper>
-        <Paper className={classes.paper}>
-          <Styled.H2>View users</Styled.H2>
+
+        <Paper className={classes.paper} style={{ background: '#7159c1' }}>
+          <Styled.H2 color="#fff">View users</Styled.H2>
           <ReadForm users={users} editRow={editRow} deleteUser={deleteUser} />
         </Paper>
       </Styled.GridFlexRow>

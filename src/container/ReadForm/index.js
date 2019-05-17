@@ -32,8 +32,8 @@ const ReadForm = props => {
       <Table className={classes.table}>
         <TableHead>
           <TableRow>
-            <TableCell align="right">Name</TableCell>
-            <TableCell align="right">Username</TableCell>
+            <TableCell align="left">Name</TableCell>
+            <TableCell align="left">Username</TableCell>
             <TableCell align="center">Actions</TableCell>
           </TableRow>
         </TableHead>
@@ -41,9 +41,9 @@ const ReadForm = props => {
           {props.users.length > 0 ? (
             props.users.map(user => (
               <TableRow key={user.id}>
-                <TableCell align="right">{user.name}</TableCell>
-                <TableCell align="right">{user.username}</TableCell>
-                <TableCell align="right">
+                <TableCell align="left">{user.name}</TableCell>
+                <TableCell align="left">{user.username}</TableCell>
+                <TableCell align="center">
                   <Button
                     onClick={() => {
                       props.editRow(user);
