@@ -26,7 +26,6 @@ const CreateForm = props => {
     if (!user.name || !user.username) return;
 
     props.addUser(user);
-    console.log(user);
     setUser(initialFormState);
   };
 
