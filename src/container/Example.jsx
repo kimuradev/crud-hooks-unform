@@ -4,6 +4,8 @@ import Input from 'components/Input';
 import Button from 'components/Button';
 
 import Form from './Formik';
+import FormYup from './FormYup';
+import FormWithFormik from './FormWithFormik';
 
 const getInitialState = props => {
   return {
@@ -37,6 +39,8 @@ const Example = props => {
       </Button>
 
       <Form />
+      <FormWithFormik />
+      <FormYup />
     </>
   );
 };
