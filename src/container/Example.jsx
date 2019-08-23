@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
 import Input from 'components/Input';
-
 import Button from 'components/Button';
+
+import Form from './Formik';
 
 const getInitialState = props => {
   return {
@@ -34,6 +35,8 @@ const Example = props => {
       <Button isLoading={isLoading} onClick={onClick}>
         Button
       </Button>
+
+      <Form />
     </>
   );
 };
