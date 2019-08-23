@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import Input from 'components/Input';
 
+import Button from 'components/Button';
+
 const getInitialState = props => {
   return {
     agencia: { value: '', isValid: false }
@@ -10,6 +12,7 @@ const getInitialState = props => {
 
 const Example = props => {
   const [userData, setUserData] = useState(getInitialState(props), null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const onChangeHandler = event => {
     setUserData({
@@ -21,9 +24,16 @@ const Example = props => {
     });
   };
 
+  const onClick = () => {
+    setIsLoading(true);
+  };
+
   return (
     <>
       <Input onChange={onChangeHandler} value={userData.agencia.value} />
+      <Button isLoading={isLoading} onClick={onClick}>
+        Button
+      </Button>
     </>
   );
 };
